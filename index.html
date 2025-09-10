@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel-Sora</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 400px; margin: 0 auto; padding: 20px; }
+        .hidden { display: none; }
+    </style>
+    <script>
+        function verifyPassword() {
+            const passwordInput = document.getElementById('password').value;
+            const hashedPassword = '648f12eeb6aa308b4e9d7a62468a20eb3a29cd3e6914f68aecc1eb4dff32f7c9'; // This should be the hashed version of 'hh5688hhhh65'
+            if (passwordInput === hashedPassword) {
+                document.getElementById('loginForm').classList.add('hidden');
+                document.getElementById('successMessage').classList.remove('hidden');
+            } else {
+                alert('Mot de passe incorrect.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm" onsubmit="event.preventDefault(); verifyPassword();">
+            <h2>Connexion</h2>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <div id="successMessage" class="hidden">
+            <h2>Bienvenue!</h2>
+            <img src="1.png" alt="Image 1">
+            <img src="2.png" alt="Image 2">
+            <p>dox  t.me/setoolkit</p>
+        </div>
+    </div>
+</body>
+</html>
